@@ -1,7 +1,7 @@
 import time, re
 def parse(s):
 
-    t = time.strptime(s, '%a %b %d %Y %H:%M:%S %p.%f')
+    t = time.strptime(s, '%a %b %d %Y %I:%M:%S %p.%f')
     reg = re.compile('\.\\d{3}')
     if (reg.search(s)):
         ms = float(reg.search(s).group(0))
